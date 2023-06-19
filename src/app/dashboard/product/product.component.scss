@@ -1,7 +1,61 @@
-.content {
-  padding-right: 450px !important;
-  padding-top: 30px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.sidebar {
+  width: 80px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  transition: width 0.3s;
   background-color: black;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &:hover {
+    width: 200px;
+  }
+  .navbar-brand,
+  .nav-link {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.3s;
+    color: red;
+    .nav-text {
+      margin-left: 10px;
+      display: none;
+      color: white;
+    }
+  }
+  &:hover .navbar-brand .nav-text,
+  &:hover .nav-link .nav-text {
+    display: inline;
+  }
+}
+
+.main-content {
+  margin-left: 80px;
+  transition: margin-left 0.3s;
+}
+
+.sidebar:hover ~ .main-content {
+  margin-left: 200px;
+}
+
+.content {
+  margin-left: 0px;
+  padding: 10px 0 !important;
+  background-color: black;
+  box-sizing: border-box;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   h1 {
     color: white;
@@ -11,6 +65,7 @@
 
   .product-form {
     margin-bottom: 30px;
+    width: 80%;
 
     .col-md-6 {
       margin-bottom: 15px;
@@ -38,9 +93,9 @@
   .row-cols-1 {
     .col {
       margin-bottom: 20px;
+      width: 100%;
 
       .card {
-        width: 100%;
         background-color: white;
         border: 1px solid gray;
         border-radius: 5px;

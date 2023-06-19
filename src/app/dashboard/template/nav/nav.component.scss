@@ -1,48 +1,44 @@
 .sidebar {
+  width: 80px;
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 0;
-  width: 280px; /* Defina a largura que você deseja para a navbar */
-  height: auto;
   overflow: auto;
-  background-color: #000000;
+  transition: width 0.3s;
+  background-color: black; // adicionado para o fundo preto
+  &::-webkit-scrollbar {
+    display: none;}
 
-  @media (max-width: 768px) { /* Isso se aplica quando a tela tem no máximo 768px de largura */
-    position: static;
-    width: 100%;
-  }
-}
-
-.navbar {
-  background-color: #ffffff1a;
-
-  .navbar-brand {
-    color: #ff0000;
-    background-color: #000000;
+  &:hover {
+    width: 200px;
   }
 
-  .nav-item {
-    color: #ff0000;
+  .navbar-brand,
+  .nav-link {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.3s;
+    color: red; // adicionado para os ícones vermelhos
 
-    &.nav-link {
-      :hover {
-        background-color: #000000;
-      }
+    .nav-text {
+      margin-left: 10px;
+      display: none;
+      color: white; // adicionado para o texto branco ao passar o mouse
     }
   }
+
+  &:hover .navbar-brand .nav-text,
+  &:hover .nav-link .nav-text {
+    display: inline;
+  }
 }
 
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1020;
-}
 .main-content {
-  margin-top: 20px;
+  margin-left: 80px;
+  transition: margin-left 0.3s;
 }
-.navbar {
-  position: sticky;
-  top: 50px; /* altura do cabeçalho */
-  z-index: 1020;
+
+.sidebar:hover ~ .main-content {
+  margin-left: 200px;
 }
