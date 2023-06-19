@@ -39,17 +39,17 @@
 }
 
 .main-content {
-  margin-left: 80px;
+  margin-left: 30px;
   transition: margin-left 0.3s;
 }
 
 .sidebar:hover ~ .main-content {
-  margin-left: 200px;
+  margin-left: 10px;
 }
 
 .content {
   margin-left: 0px;
-  padding: 10px 0 !important;
+  // padding: 5px 0 !important;
   background-color: black;
   box-sizing: border-box;
   width: 100vw;
@@ -64,7 +64,7 @@
   }
 
   .product-form {
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     width: 80%;
 
     .col-md-6 {
@@ -73,7 +73,7 @@
       input {
         width: 100%;
         padding: 5px;
-        border: 1px solid gray;
+        border: 1px solid rgb(255, 253, 253);
         border-radius: 5px;
       }
     }
@@ -101,7 +101,7 @@
         border-radius: 5px;
 
         .card-body {
-          padding: 15px;
+          padding: 10px;
 
           .card-title {
             font-size: 18px;
